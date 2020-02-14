@@ -1,6 +1,6 @@
 {
   "name": "subtitle-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parse time in SRT, VTT, ASS. to and from second, milliscond",
   "homepage": "https://github.com/1c7/subtitle-time",
   "keywords": [
