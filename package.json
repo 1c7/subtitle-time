@@ -1,0 +1,26 @@
+{
+  "name": "subtitle-time",
+  "version": "1.0.0",
+  "description": "parse time in SRT, VTT, ASS. to and from second, milliscond",
+  "keywords": [
+    "subtitle",
+    "time",
+    "time-parsing",
+    "time-parser",
+    "SRT",
+    "VTT",
+    "ASS",
+    "parser",
+    "second",
+    "millisecond"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.3.0"
+  }
+}
