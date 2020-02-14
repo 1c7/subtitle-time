@@ -164,3 +164,23 @@ test('parse second format, output second', t => {
   let time = new SubtitleTime(0.423509, 'second');
   t.assert(time.to('second') == 0.423);
 });
+
+test('second -> vtt', t => {
+  let time = new SubtitleTime(61, 'second');
+  t.assert(time.to('vtt') == '00:01:01.000');
+});
+
+test('second -> ass', t => {
+  let time = new SubtitleTime(61, 'second');
+  t.assert(time.to('ass') == '0:01:01.00');
+});
+
+test('SRT -> VTT', t => {
+  let time = new SubtitleTime('00:01:01,000', 'srt');
+  t.assert(time.to('vtt') == '00:01:01.000');
+});
+
+test('SRT -> ASS', t => {
+  let time = new SubtitleTime('00:01:01,000', 'srt');
+  t.assert(time.to('ass') == '0:01:01.00');
+});

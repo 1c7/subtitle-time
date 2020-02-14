@@ -41,7 +41,7 @@ TODO
 
 ### 测试
 ```bash
-npm test ./test/index.js
+npm test
 ```
 
 ### 为什么写这个

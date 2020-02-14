@@ -119,6 +119,7 @@ class SubtitleTime {
       }
 
       return `${this.hour}:${minute}:${second}.${millisecond}`
+      // 0:00:08.05
     }
     if (time_unit == 'srt') {
       let hour = String(this.hour).padStart(2, '0')
@@ -134,6 +135,23 @@ class SubtitleTime {
       }
 
       return `${hour}:${minute}:${second},${millisecond}`
+      // 00:00:06,998
+    }
+    if (time_unit == 'vtt') { 
+      let hour = String(this.hour).padStart(2, '0')
+      let minute = String(this.minute).padStart(2, '0')
+      let second = String(this.second).padStart(2, '0')
+
+      var mill_string = String(this.millisecond);
+      let millisecond = null;
+      if (mill_string.length > 3) {
+        millisecond = mill_string.substring(0, 3);
+      } else {
+        millisecond = mill_string.padEnd(3, '0')
+      }
+
+      return `${hour}:${minute}:${second}.${millisecond}`
+      // 00:00:00.180
     }
   }
 
