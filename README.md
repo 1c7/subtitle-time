@@ -8,19 +8,19 @@
 2. day.js, moment.js 不是针对这个场景做的，用不了
 3. 我在 npm 上找不到替代品, 就只能自己写了
 
-### 安装
+## 安装
 ```bash
 npm i subtitle-time
 ```
 
-### 导入
+## 引入
 ```javascript
-const {
-  SubtitleTime
-} = require('./index.js')
+const { SubtitleTime } = require('./index.js')
 ```
 
-### 使用例子: 秒转成 srt
+## 使用例子
+
+### 秒 -> SRT
 ```javascript
 let time = new SubtitleTime(61, 'second');
 time.to('srt'); // '00:01:01,000'
