@@ -28,15 +28,28 @@ t.to('second'); // 75.50
 ```
 
 ### 秒 -> VTT
-TODO
+```javascript
+let t = new SubtitleTime(61, 'second');
+t.to('vtt'); // '00:01:01.000'
+```
 
 ### 秒 -> ASS
-TODO
+```javascript
+let t = new SubtitleTime(61, 'second');
+t.to('ass'); // '0:01:01.00'
+```
 
 ### SRT -> VTT
-TODO
+```javascript
+let t = new SubtitleTime('00:01:01,000', 'srt');
+t.to('vtt'); // '00:01:01.000'
+```
 
 ### SRT -> ASS
+TODO
+
+
+## 比较
 TODO
 
 ### 测试
