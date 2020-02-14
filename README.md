@@ -28,6 +28,6 @@ time.to('srt'); // '00:01:01,000'
 
 ### 测试
 ```bash
-npm test test.js
+npm test ./test/index.js
 ```
 
