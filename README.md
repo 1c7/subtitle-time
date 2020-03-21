@@ -1,5 +1,5 @@
 # subtitle-time 
-[English Readme Click Here](./README-en.md)   
+[English Readme](./README-en.md)   
 
 专门处理字幕时间，可以处理 SRT, VTT 和 ASS 的时间.    
 
@@ -10,7 +10,7 @@ npm i subtitle-time
 
 ## 引入
 ```javascript
-const { SubtitleTime } = require('./index.js')
+const { SubtitleTime } = require('subtitle-time')
 ```
 
 ## 使用例子
@@ -57,7 +57,8 @@ TODO
 npm test
 ```
 
-### 为什么写这个
-1. 需要处理字幕文件中的时间格式，从一种格式转另一种，比如把秒 `5` 转成 SRT 格式 `00:00:05,000`
-2. dayjs, moment.js 等一些其他的 JS 时间库用不了, 它们不是针对这个场景做的
-3. npm 上找不到替代品
+## 这个库为什么存在?  
+1. 我需要转换字幕的时间格式，比如把 `5` (秒)转成 SRT `00:00:05,000`
+2. dayjs, moment.js 等其他 JS 时间库用不了
+3. npm 上没有解决这个问题的工具
+

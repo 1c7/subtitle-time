@@ -1,7 +1,7 @@
 const test = require('ava');
 const {
   SubtitleTime
-} = require('../src/index.js')
+} = require('../index.js')
 
 // input:  '0:01:15.50'
 // output: '0:01:15.50'
