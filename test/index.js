@@ -1,3 +1,7 @@
+// npm test
+// to run this file
+// before publishing new version, all these test should passed
+
 const test = require('ava');
 const {
   SubtitleTime
@@ -215,4 +219,10 @@ test('把 vtt 时间转成 毫秒', t => {
   var subtitle_time = new SubtitleTime('00:00:02.300', 'vtt');
   var time = subtitle_time.to('ms');
   t.assert(time == '2300');
+});
+
+test('对比2个时间', t => {
+  var time_2 = new SubtitleTime('2300', 'ms');
+  var time_3 = new SubtitleTime('00:00:02.300', 'vtt');
+  t.assert(time_2.isEqual(time_3));
 });

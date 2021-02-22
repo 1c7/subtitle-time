@@ -1,7 +1,10 @@
 # https://npm.github.io/publishing-pkgs-docs/publishing/the-npmignore-file.html
 
-# 忽略文档目录，不应该在 npm package 里
+# 文档，不需要在 npm package 里
 doc/
 
-# 测试代码也干脆不要放在 npm package 里
+# 测试代码，不需要在 npm package 里
 test/
+
+# 例子
+example/

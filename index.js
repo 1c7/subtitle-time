@@ -95,6 +95,7 @@ class SubtitleTime {
     this.millisecond = time % 1000;
     var second = (time - (time % 1000)) / 1000
     this._set_time_using_second(second)
+    this._set_null_to_zero();
   }
 
   // 输入: 秒
@@ -110,6 +111,7 @@ class SubtitleTime {
       second = second - parseInt(this.minute * 60);
     }
     this.second = second;
+    this._set_null_to_zero();
   }
 
   // 如果为 null, 改成 0
