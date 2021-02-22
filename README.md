@@ -45,13 +45,6 @@ let t = new SubtitleTime('00:01:01,000', 'srt');
 t.to('vtt'); // '00:01:01.000'
 ```
 
-### SRT -> ASS
-TODO
-
-
-## 比较
-TODO
-
 ### 测试
 ```bash
 npm test

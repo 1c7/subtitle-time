@@ -184,3 +184,35 @@ test('SRT -> ASS', t => {
   let time = new SubtitleTime('00:01:01,000', 'srt');
   t.assert(time.to('ass') == '0:01:01.00');
 });
+
+// 输入: 2200 (毫秒)
+// 输出: 00:00:02,200 (SRT 时间)
+test('把毫秒转成 srt 时间', t => {
+  var subtitle_time = new SubtitleTime('2200', 'ms');
+  var time = subtitle_time.to('srt');
+  t.assert(time == '00:00:02,200');
+});
+
+test('把毫秒转成 vtt 时间', t => {
+  var subtitle_time = new SubtitleTime('2300', 'ms');
+  var time = subtitle_time.to('vtt');
+  t.assert(time == '00:00:02.300');
+});
+
+test('把毫秒转成 srt 时间 - 情况2', t => {
+  var subtitle_time = new SubtitleTime('3600000', 'ms');
+  var time = subtitle_time.to('srt');
+  t.assert(time == '01:00:00,000');
+});
+
+test('把毫秒转成 srt 时间 - 情况3', t => {
+  var subtitle_time = new SubtitleTime('3600200', 'ms');
+  var time = subtitle_time.to('srt');
+  t.assert(time == '01:00:00,200');
+});
+
+test('把 vtt 时间转成 毫秒', t => {
+  var subtitle_time = new SubtitleTime('00:00:02.300', 'vtt');
+  var time = subtitle_time.to('ms');
+  t.assert(time == '2300');
+});
